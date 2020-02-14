@@ -29,7 +29,9 @@ public class Rectangle {
 
     public String draw() {
 
-        if (Character.isUpperCase(color.charAt(0)))
+        if (Character.isLowerCase(color.charAt(0)) || (color.length() > 20) || (color.length() < 2))
+
+            this.color = "Blue";
 
             for (int h = 1; h <= hi; h++) {
                 for (int w = 1; w <= wid; w++) {
@@ -40,6 +42,8 @@ public class Rectangle {
 
         }
         return "";
+
+
     }
 
 
